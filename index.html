@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Cuttuu Babyyy 💗</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Baloo 2', cursive;
+    color: #70445d;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 10% 15%, rgba(255,255,255,.9) 0 3px, transparent 4px),
+        radial-gradient(circle at 85% 25%, rgba(255,255,255,.8) 0 3px, transparent 4px),
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,.7) 0 2px, transparent 3px),
+        linear-gradient(135deg, #ffe6f0, #edf7ff, #fff0f7);
+}
+
+/* =========================
+   FLOATING DECORATIONS
+========================= */
+
+.float {
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+    animation: floatUp linear infinite;
+    opacity: .7;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .7;
+    }
+
+    100% {
+        transform: translateY(-15vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    min-height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    position: relative;
+    z-index: 2;
+
+    animation: pageAppear .7s ease;
+}
+
+.page.active {
+    display: flex;
+}
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(.96) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    width: min(680px, 94vw);
+
+    background: rgba(255,255,255,.76);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 2px solid rgba(255,255,255,.9);
+
+    border-radius: 35px;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(190,120,160,.20),
+        0 5px 20px rgba(150,180,210,.12);
+}
+
+.wide-card {
+    width: min(760px, 95vw);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.big-title {
+    font-family: 'Pacifico', cursive;
+    color: #ef79a9;
+    font-size: clamp(34px, 8vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    color: #ed78a7;
+    font-size: clamp(30px, 7vw, 46px);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.emoji-heading {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    font-weight: 700;
+
+    padding: 12px 28px;
+
+    border-radius: 999px;
+
+    transition: .25s ease;
+
+    box-shadow: 0 8px 20px rgba(160,90,130,.14);
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+}
+
+button:active {
+    transform: scale(.94);
+}
+
+.yes {
+    background: #ff91b9;
+    color: white;
+}
+
+.no {
+    background: #e4f0ff;
+    color: #607994;
+}
+
+.continue {
+    background: #ff9fbe;
+    color: white;
+}
+
+/* =========================
+   REACTIONS
+========================= */
+
+.reaction {
+    min-height: 45px;
+
+    margin: 12px auto;
+
+    color: #ed679c;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.shake {
+    animation: shake .45s ease;
+}
+
+@keyframes shake {
+
+    0%,100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+/* =========================
+   CRYING DOODLE
+========================= */
+
+.crying {
+    display: none;
+    margin: 10px auto 5px;
+}
+
+.crying.show {
+    display: block;
+}
+
+.face {
+    position: relative;
+
+    width: 145px;
+    height: 125px;
+
+    margin: auto;
+
+    background: #fffdfb;
+
+    border-radius: 48% 48% 45% 45%;
+
+    box-shadow: 0 8px 20px rgba(100,70,90,.12);
+
+    animation: sadBounce 1.5s infinite;
+}
+
+@keyframes sadBounce {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+.ear {
+    position: absolute;
+
+    width: 45px;
+    height: 58px;
+
+    background: #fffdfb;
+
+    border-radius: 50%;
+
+    top: -22px;
+}
+
+.ear.left {
+    left: 5px;
+    transform: rotate(-25deg);
+}
+
+.ear.right {
+    right: 5px;
+    transform: rotate(25deg);
+}
+
+.eye {
+    position: absolute;
+
+    width: 12px;
+    height: 18px;
+
+    background: #49353e;
+
+    border-radius: 50%;
+
+    top: 55px;
+}
+
+.eye.left {
+    left: 45px;
+}
+
+.eye.right {
+    right: 45px;
+}
+
+.sad-mouth {
+    position: absolute;
+
+    width: 27px;
+    height: 17px;
+
+    border-top: 4px solid #49353e;
+
+    border-radius: 50%;
+
+    left: 59px;
+    top: 82px;
+}
+
+.tear {
+    position: absolute;
+
+    width: 10px;
+    height: 17px;
+
+    background: #8bdcff;
+
+    border-radius: 50%;
+
+    top: 72px;
+
+    animation: tearDrop 1s infinite;
+}
+
+.tear.left {
+    left: 39px;
+}
+
+.tear.right {
+    right: 39px;
+
+    animation-delay: .3s;
+}
+
+@keyframes tearDrop {
+
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(22px);
+        opacity: .1;
+    }
+}
+
+/* =========================
+   CHOICES
+========================= */
+
+.choice-box {
+    margin-top: 20px;
+}
+
+.choice-question {
+    color: #e875a5;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    margin-bottom: 17px;
+}
+
+.choice-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 13px;
+}
+
+.choice {
+    background: rgba(255,255,255,.9);
+
+    border: 2px solid #ffd2e3;
+
+    color: #80516a;
+
+    border-radius: 20px;
+
+    padding: 15px 10px;
+
+    font-size: 19px;
+}
+
+.choice:hover {
+    background: #fff0f7;
+    border-color: #ff9fc2;
+}
+
+.choice.selected {
+    background: #ffabc7;
+    color: white;
+    border-color: #ff91b9;
+}
+
+/* =========================
+   BOUQUET
+========================= */
+
+.bouquet-scene {
+    width: 360px;
+    max-width: 90vw;
+
+    height: 250px;
+
+    margin: 10px auto;
+
+    position: relative;
+}
+
+.character {
+    position: absolute;
+
+    width: 105px;
+    height: 120px;
+
+    bottom: 15px;
+
+    border-radius: 48% 48% 35% 35%;
+}
+
+.character .head {
+    position: absolute;
+
+    width: 100px;
+    height: 88px;
+
+    top: -24px;
+    left: 2px;
+
+    border-radius: 50%;
+}
+
+.character .ear {
+    width: 34px;
+    height: 34px;
+
+    top: -31px;
+}
+
+.character .ear.one {
+    left: 5px;
+}
+
+.character .ear.two {
+    right: 5px;
+}
+
+.character .eye {
+    width: 8px;
+    height: 12px;
+
+    top: 34px;
+}
+
+.character .eye.one {
+    left: 31px;
+}
+
+.character .eye.two {
+    right: 31px;
+}
+
+.character .nose {
+    position: absolute;
+
+    width: 12px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #4c3038;
+
+    left: 45px;
+    top: 51px;
+}
+
+.brown {
+    left: 45px;
+    background: #b87e60;
+}
+
+.brown .head,
+.brown .ear {
+    background: #b87e60;
+}
+
+.white {
+    right: 45px;
+    background: #fffaf7;
+}
+
+.white .head,
+.white .ear {
+    background: #fffaf7;
+}
+
+.big-bouquet {
+    position: absolute;
+
+    font-size: 62px;
+
+    left: 50%;
+    top: 40px;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    animation: bouquetMove 1.5s infinite ease-in-out;
+}
+
+@keyframes bouquetMove {
+
+    0%,100% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(5deg);
+    }
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message-box {
+    margin-top: 25px;
+
+    text-align: left;
+
+    background: rgba(255,255,255,.72);
+
+    border-radius: 25px;
+
+    padding: 26px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    box-shadow: inset 0 0 20px rgba(230,150,190,.07);
+}
+
+.message-box p {
+    margin-bottom: 18px;
+}
+
+.signature {
+    text-align: center;
+
+    color: #ef78a8;
+
+    font-family: 'Pacifico', cursive;
+
+    font-size: 25px;
+
+    line-height: 1.7;
+
+    margin-top: 25px;
+}
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery-title {
+    color: #ef78a8;
+
+    font-family: 'Pacifico', cursive;
+
+    font-size: 32px;
+
+    margin-bottom: 7px;
+}
+
+.gallery-subtitle {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.photo-card {
+    background: white;
+
+    padding: 7px;
+
+    border-radius: 13px;
+
+    box-shadow: 0 10px 22px rgba(120,80,100,.16);
+
+    transition: .3s ease;
+}
+
+.photo-card img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+    display: block;
+}
+
+.photo-card:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+.photo-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.photo-card:nth-child(3n) {
+    transform: rotate(-3deg);
+}
+
+.photo-card:hover {
+    transform: rotate(0deg) scale(1.04);
+}
+
+/* =========================
+   SPARKLES
+========================= */
+
+.sparkle {
+    position: absolute;
+
+    font-size: 25px;
+
+    animation: sparkle 2s infinite;
+}
+
+.sparkle.a {
+    top: 10%;
+    left: 8%;
+}
+
+.sparkle.b {
+    top: 18%;
+    right: 8%;
+
+    animation-delay: .5s;
+}
+
+.sparkle.c {
+    bottom: 15%;
+    left: 10%;
+
+    animation-delay: 1s;
+}
+
+.sparkle.d {
+    bottom: 20%;
+    right: 10%;
+
+    animation-delay: 1.5s;
+}
+
+@keyframes sparkle {
+
+    0%,100% {
+        opacity: .3;
+        transform: scale(.8) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3) rotate(20deg);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:520px) {
+
+    .card {
+        padding: 30px 17px;
+        border-radius: 28px;
+    }
+
+    .subtitle {
+        font-size: 19px;
+    }
+
+    .choice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        gap: 10px;
+    }
+
+    .message-box {
+        font-size: 16px;
+        padding: 19px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 11px 22px;
+    }
+
+    .bouquet-scene {
+        transform: scale(.9);
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- Floating decorations -->
+
+<div class="float" style="left:5%;font-size:25px;animation-duration:11s;">💗</div>
+<div class="float" style="left:18%;font-size:18px;animation-duration:14s;">🎀</div>
+<div class="float" style="left:35%;font-size:23px;animation-duration:12s;">💞</div>
+<div class="float" style="left:58%;font-size:20px;animation-duration:15s;">✨</div>
+<div class="float" style="left:78%;font-size:25px;animation-duration:13s;">💗</div>
+<div class="float" style="left:90%;font-size:19px;animation-duration:16s;">🫶🏻</div>
+
+
+<!-- =========================================
+     PAGE 1 — SURPRISE
+========================================= -->
+
+<section class="page active" id="page1">
+
+<span class="sparkle a">✨</span>
+<span class="sparkle b">💗</span>
+<span class="sparkle c">🎀</span>
+<span class="sparkle d">✨</span>
+
+<div class="card">
+
+<div class="emoji-heading">
+🧸🎀
+</div>
+
+<h1 class="big-title">
+Helloo Chotuu<br>
+babbie 😚💋
+</h1>
+
+<p class="subtitle">
+I have a surprise for youuu 🥺💗<br>
+Do u want it? 👉🏻👈🏻🎀
+</p>
+
+<div class="reaction" id="reaction1"></div>
+
+<div class="buttons">
+
+<button class="yes" onclick="goToPage(2)">
+Yesss 💗
+</button>
+
+<button class="no" onclick="surpriseNo()">
+No 😭
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     PAGE 2 — LOVE
+========================================= -->
+
+<section class="page" id="page2">
+
+<div class="card">
+
+<div class="emoji-heading">
+🥺💗
+</div>
+
+<h1 class="title">
+Do u lovee me?
+</h1>
+
+<p class="subtitle">
+Be honesttt 👀👉🏻👈🏻
+</p>
+
+<div class="reaction" id="reaction2"></div>
+
+<div class="crying" id="crying">
+
+<div class="face">
+
+<div class="ear left"></div>
+<div class="ear right"></div>
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+
+<div class="sad-mouth"></div>
+
+<div class="tear left"></div>
+<div class="tear right"></div>
+
+</div>
+
+<p style="font-size:21px;font-weight:700;margin-top:8px;">
+rula diya mujheee 😭💔
+</p>
+
+</div>
+
+<div class="buttons">
+
+<button class="yes" onclick="goToPage(3)">
+Yesss 🥰
+</button>
+
+<button class="no" onclick="loveNo()">
+No 😭
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     PAGE 3 — BOUQUET
+========================================= -->
+
+<section class="page" id="page3">
+
+<div class="card">
+
+<div class="emoji-heading">
+💐🧸💗
+</div>
+
+<h1 class="title">
+Will you accept<br>
+my bouquet? 💐🥺
+</h1>
+
+<div class="bouquet-scene">
+
+<div class="character brown">
+
+<div class="head"></div>
+
+<div class="ear one"></div>
+<div class="ear two"></div>
+
+<div class="eye one"></div>
+<div class="eye two"></div>
+
+<div class="nose"></div>
+
+</div>
+
+
+<div class="character white">
+
+<div class="head"></div>
+
+<div class="ear one"></div>
+<div class="ear two"></div>
+
+<div class="eye one"></div>
+<div class="eye two"></div>
+
+<div class="nose"></div>
+
+</div>
+
+<div class="big-bouquet">
+💐
+</div>
+
+</div>
+
+<div class="reaction" id="reaction3"></div>
+
+<div class="buttons">
+
+<button class="yes" onclick="bouquetYes()">
+Yesss 💗
+</button>
+
+<button class="no" onclick="bouquetNo()">
+No 😭
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     PAGE 4 — CHOICES
+========================================= -->
+
+<section class="page" id="page4">
+
+<div class="card">
+
+<div class="emoji-heading">
+🎀💗🎀
+</div>
+
+<h1 class="title">
+Okaayyy babyyy 🥹
+</h1>
+
+<p class="subtitle">
+Now let's see your choices hehe 🤭💗
+</p>
+
+<div id="choiceArea"></div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     PAGE 5 — MESSAGE
+========================================= -->
+
+<section class="page" id="page5">
+
+<div class="card wide-card">
+
+<div class="emoji-heading">
+🥹🎀💗🫂
+</div>
+
+<h1 class="title">
+Happy Boyfriend Dayyy
+</h1>
+
+<div class="message-box">
+
+<p>
+<strong>
+Happy Boyfriend Dayyy to my cuttuu babyyy 🥹🎀💗🫂
+</strong>
+</p>
+
+<p>
+Pata hai, hum kitnaaa ladte hain 😭😭 kabhi kabhi toh lagta hai hum dono ka main kaam hi ek dusre se ladna hai 😭🤦🏻‍♀️ but sach bolu toh, inn saari fights ke beech bhi I never want to hurt youuu 🥺💗 You’re genuinely such a sweet, adorable and precious person to me 🫂🫶🏻
+</p>
+
+<p>
+And omggg your eyes??? 😭👉🏻👈🏻 Those eyes, those lashes, that smileee, your personalityyy… literally EVERYTHING about you is so adorableee 😭🎀💗 I swear, jitna bhi bolu na, sab kam hi lagta hai. 🥹🫂
+</p>
+
+<p>
+It’s only been 4 months, but somehow you’ve become one of the most important people in my life, no doubt about that. 🥺💗 And I reallyyy don’t want to leave youuu. I just want you to stay with me, handle my nakhre, meri bakbak, meri mood swings aur meri faltu ki fights 😭🫂🎀 because I’m obviously going to annoy youuu, irritate youuu and pareshan youuu foreverrr 😭😈💗
+</p>
+
+<p>
+And haan!!! Aapko mujhe chatpati chizein bhi khilani thiiii 😤🌶️🌸 Aap bhul rahe hooo!! Aap mujhe khilaoge na toh mai bahuttt khush rahungi 😭🎀🫶🏻 phir shayad ladungi bhi nahi… thodi der ke liye 🤭😂💗
+</p>
+
+<p>
+I just want you to know that I’ll always loveee youuu so muchhh 🥹💗🫂 No matter how much we fight, you’ll always be my cuttuu babyyy. 🥺🎀 Please bas aise hi mere saath rehna, mujhe handle karna aur mujhe kabhi akela mat chhodnaaa 🫂💗
+</p>
+
+<p>
+You’re stuck with me now hehe 😈🎀💋
+</p>
+
+<div class="signature">
+
+I loveee youuu sooooo muchhhh,<br>
+my adorable babyyy 😭💗🧿🫂🎀
+
+<br><br>
+
+Happy Boyfriend Dayyy, cutieee 😚🫶🏻💗
+
+<br>
+
+*mwahhh* 💋🥺👉🏻👈🏻🎀
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button class="continue" onclick="goToPage(6)">
+Waittt... there's more 🥺🎀
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     PAGE 6 — PHOTOS LAST
+========================================= -->
+
+<section class="page" id="page6">
+
+<div class="card wide-card">
+
+<div class="emoji-heading">
+📸💗🎀
+</div>
+
+<h1 class="big-title">
+Happy Boyfriend's Dayyy
+</h1>
+
+<h2 class="gallery-title">
+My favourite memories 🥹💗
+</h2>
+
+<p class="gallery-subtitle">
+A little collection of my favourite pictures of usss 🫂🎀
+</p>
+
+
+<div class="gallery">
+
+<div class="photo-card">
+<img src="1.png.png" alt="Memory 1">
+</div>
+
+<div class="photo-card">
+<img src="2.png.png" alt="Memory 2">
+</div>
+
+<div class="photo-card">
+<img src="3.png.png" alt="Memory 3">
+</div>
+
+<div class="photo-card">
+<img src="4.png.png" alt="Memory 4">
+</div>
+
+<div class="photo-card">
+<img src="5.png.png" alt="Memory 5">
+</div>
+
+<div class="photo-card">
+<img src="6.png.png" alt="Memory 6">
+</div>
+
+<div class="photo-card">
+<img src="7.png.png" alt="Memory 7">
+</div>
+
+<div class="photo-card">
+<img src="8.png.png" alt="Memory 8">
+</div>
+
+<div class="photo-card">
+<img src="9.png.png" alt="Memory 9">
+</div>
+
+<div class="photo-card">
+<img src="10.png.png" alt="Memory 10">
+</div>
+
+<div class="photo-card">
+<img src="11.png.png" alt="Memory 11">
+</div>
+
+<div class="photo-card">
+<img src="12.png.png" alt="Memory 12">
+</div>
+
+<div class="photo-card">
+<img src="13.png.png" alt="Memory 13">
+</div>
+
+</div>
+
+<p style="margin-top:25px;font-size:20px;">
+Made with lots and lots of loveee 💗🎀🧸
+</p>
+
+</div>
+
+</section>
+
+
+<script>
+
+/* =========================
+   PAGE NAVIGATION
+========================= */
+
+function goToPage(number) {
+
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page" + number).classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+/* =========================
+   SURPRISE NO
+========================= */
+
+function surpriseNo() {
+
+    const reaction = document.getElementById("reaction1");
+
+    reaction.innerHTML =
+        "HAWWW 😭 glt baatt!! Aise kaise NO bol diyaaa 😤🎀";
+
+    reaction.classList.remove("shake");
+
+    void reaction.offsetWidth;
+
+    reaction.classList.add("shake");
+}
+
+
+/* =========================
+   LOVE NO
+========================= */
+
+function loveNo() {
+
+    const reaction = document.getElementById("reaction2");
+
+    reaction.innerHTML =
+        "RULAA DIYA MUJHEEE 😭💔";
+
+    reaction.classList.remove("shake");
+
+    void reaction.offsetWidth;
+
+    reaction.classList.add("shake");
+
+    document.getElementById("crying").classList.add("show");
+}
+
+
+/* =========================
+   BOUQUET
+========================= */
+
+function bouquetNo() {
+
+    const reaction = document.getElementById("reaction3");
+
+    reaction.innerHTML =
+        "U make me upsettt 🥺💔";
+
+    reaction.classList.remove("shake");
+
+    void reaction.offsetWidth;
+
+    reaction.classList.add("shake");
+}
+
+
+function bouquetYes() {
+
+    const reaction = document.getElementById("reaction3");
+
+    reaction.innerHTML =
+        "AWWW BABYYY SWEETIEE PIEEEE 😭💗🎀🫂";
+
+    setTimeout(() => {
+        goToPage(4);
+    }, 1400);
+}
+
+
+/* =========================
+   CHOICES
+========================= */
+
+const choices = [
+
+    {
+        question: "Beaches or Mountains? 🌊🏔️",
+
+        options: [
+            ["🌊 Beaches", "beaches"],
+            ["🏔️ Mountains", "mountains"]
+        ]
+    },
+
+    {
+        question: "Ice creams or Chocolates? 🍦🍫",
+
+        options: [
+            ["🍦 Ice creams", "icecream"],
+            ["🍫 Chocolates", "chocolate"]
+        ]
+    },
+
+    {
+        question: "Cuddling or Kissing? 🫂💋",
+
+        options: [
+            ["🫂 Cuddling", "cuddling"],
+            ["💋 Kissing", "kissing"]
+        ]
+    },
+
+    {
+        question: "Cars or Bikes? 🚗🏍️",
+
+        options: [
+            ["🚗 Cars", "cars"],
+            ["🏍️ Bikes", "bikes"]
+        ]
+    },
+
+    {
+        question: "Late night walk or late night drive? 🌙",
+
+        options: [
+            ["🚶🏻‍♀️ Late night walk", "walk"],
+            ["🚘 Late night drive", "drive"]
+        ]
+    }
+
+];
+
+let currentChoice = 0;
+
+
+function showChoice() {
+
+    const area = document.getElementById("choiceArea");
+
+    const current = choices[currentChoice];
+
+    area.innerHTML = `
+
+        <div class="choice-box">
+
+            <div class="choice-question">
+                ${current.question}
+            </div>
+
+            <div class="choice-grid">
+
+                <button
+                    class="choice"
+                    onclick="selectChoice(this)"
+                >
+                    ${current.options[0][0]}
+                </button>
+
+                <button
+                    class="choice"
+                    onclick="selectChoice(this)"
+                >
+                    ${current.options[1][0]}
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+}
+
+
+function selectChoice(button) {
+
+    button.classList.add("selected");
+
+    setTimeout(() => {
+
+        currentChoice++;
+
+        if (currentChoice < choices.length) {
+
+            showChoice();
+
+        } else {
+
+            document.getElementById("choiceArea").innerHTML = `
+
+                <div style="font-size:60px;margin-top:20px;">
+                    🥹💗✨
+                </div>
+
+                <h2 style="
+                    color:#e875a5;
+                    font-family:'Pacifico',cursive;
+                    font-size:32px;
+                    margin-top:10px;
+                ">
+                    Awww babyyy 🥹🎀
+                </h2>
+
+                <p style="font-size:20px;margin-top:10px;">
+                    Okayyy I know your choices now hehe 🤭💗
+                </p>
+
+                <button
+                    class="continue"
+                    style="margin-top:20px;"
+                    onclick="goToPage(5)"
+                >
+                    One last thinggg 🥺💗
+                </button>
+
+            `;
+
+        }
+
+    }, 550);
+}
+
+
+/* =========================
+   START CHOICES
+========================= */
+
+showChoice();
+
+
+/* =========================
+   CLICK HEART EFFECT
+========================= */
+
+document.addEventListener("click", function(event) {
+
+    const heart = document.createElement("div");
+
+    const hearts = [
+        "💗",
+        "💖",
+        "💕",
+        "💞",
+        "✨"
+    ];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.position = "fixed";
+
+    heart.style.left =
+        event.clientX + "px";
+
+    heart.style.top =
+        event.clientY + "px";
+
+    heart.style.pointerEvents = "none";
+
+    heart.style.zIndex = "9999";
+
+    heart.style.fontSize = "22px";
+
+    heart.style.animation =
+        "heartPop 1s ease forwards";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 1000);
+
+});
+
+
+const heartStyle = document.createElement("style");
+
+heartStyle.innerHTML = `
+
+@keyframes heartPop {
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            scale(.5);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(-50%, -100px)
+            scale(1.5);
+
+        opacity: 0;
+    }
+
+}
+
+`;
+
+document.head.appendChild(heartStyle);
+
+</script>
+
+</body>
+</html>
